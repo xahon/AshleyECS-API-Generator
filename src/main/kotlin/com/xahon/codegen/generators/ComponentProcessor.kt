@@ -125,8 +125,7 @@ class ComponentProcessor : AbstractProcessor() {
 
     private fun generateRemoveFunction(buildInfo: BuildInfo): FunSpec.Builder {
         return FunSpec.builder("Entity.remove${buildInfo.simpleName}")
-                .returns(buildInfo.originalTypeName.asNullable())
-                .addStatement("return this.remove(${buildInfo.originalTypeName}::class.java) as ${buildInfo.originalTypeName}")
+                .addStatement("this.remove(${buildInfo.originalTypeName}::class.java)")
     }
 
     private fun generateAddFunction(buildInfo: BuildInfo): FunSpec.Builder {
