@@ -41,7 +41,7 @@ if (entity.hasPosition) {
   val x = entity.getPosition!!.x
   // Do something
 } else {
-  entity.addPosition(fully.qualified.name.Position(2f, 10f))
+  entity.addPosition(Position(2f, 10f))
 }
 
 entity.removePosition()
@@ -81,15 +81,15 @@ get needed component
 
 
 # How does it work in Intellij IDEA?
-To use that generator you don't need to enable 'Annotation processing'
-To process annotations you don't need to run gradle from terminal
+To use that generator you don't need to enable 'Annotation processing'  
+To process annotations you don't need to run gradle from terminal before run  
 
 JetBrains says that kapt is not supported by IDEA's build system: 
 > Please note that kapt is still not supported for IntelliJ IDEA’s own build system. Launch the build from the “Maven Projects” toolbar whenever you want to re-run the annotation processing.  
 >  
 > Source (https://kotlinlang.org/docs/reference/kapt.html)
 
-But this is working fine for me even if I just run project after clean
+But this is working fine for me even if I just run project after I clean it
 
 
 # How to add into project?
