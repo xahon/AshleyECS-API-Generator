@@ -22,7 +22,7 @@ class GeneratedPosition : Component {
 
 fun Entity.addPosition(position: fully.qualified.name.Position): fully.qualified.name.Position = this.addAndReturn(position) as fully.qualified.name.Position
 
-fun Entity.removePosition(): fully.qualified.name.Position? = this.remove(fully.qualified.name.Position::class.java) as fully.qualified.name.Position
+fun Entity.removePosition() = this.remove(fully.qualified.name.Position::class.java)
 
 val Entity.getPosition: fully.qualified.name.Position?
     get() = GeneratedPosition.Mapper[this]
